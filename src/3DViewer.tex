@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+
+
+\title{3DViewer v1.0}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section*{Description}
+
+The 3DViewer program is designed to display 3D models parsed from files in format file.obj, in wireframe form.
+
+It is able to use vertexes and facets only. Qt library is used for interface realization.
+
+\section{Assembly}
+
+To run the 3DViewer you will require following programs - Qt6 or later version ( including qmake), bash, GCC compiler,
+GNU make, Mingw compiler (Qt6 contains it). For Windows OS it might be good to install Cygwin for \textbf{make tests}. Also for Windows it
+might be necessary to add the PATH  of the System variables path, to avoid  possible errors. You need to add the paths
+corresponding to the following to the PATH variable:
+
+\noindent\textbf{C:\textbackslash{}..(path to Qt installed)\textbackslash{}Qt\textbackslash{}6.4.1(Qt version)\textbackslash{}mingw\_64(mingw version)\textbackslash{}bin}
+
+\noindent\textbf{C:\textbackslash{}(path to Qt installed)\textbackslash{}Qt\textbackslash{}Tools\textbackslash{}mingw1120\_64(mingw tools version)\textbackslash{}bin}
+
+May be it will be necessary to set equivalent paths in MacOS or Linux if assembly goes wrong.
+ In order to build the program, use \textbf{make} in the root directory of the project.  Then you may execute program,
+\textbf{3DViewer} is located in the folder \textbf{build/bin}.
+
+\section{Installation }
+
+Tested on MacOS  and Windows with Cygwin.
+To install you may use \textbf{make install} , to install 3DViewer in your home directory.
+
+\section{Testing}
+
+Testing cover correctness of parsing of the .obj file and the Athenian transformations of the model.
+For testing, you need to call \textbf{make tests}. Test coverage is called by \textbf{make gcov\_report}.
+
+
+\section{Uninstall}
+
+To uninstall the 3DViewer you should at  the root directory of the project and call \textbf{make uninstall}.
+This will delete installation files and folders.
+
+
+\vfill
+
+\section{Main features of the 3DViewer}
+
+In the 3DViewer program you are able to:
+\begin{itemize}
+    \item Upload and view model from the file in the fileName.obj
+    \item Save the model as image in .bmp and .jpeg format
+    \item Save GIF animation (640x480, 10fps, 5s)
+    \item To see file path, amount of vertexes and facets
+\end{itemize}
+
+By using mouse, mouse wheel , spin boxes and slide bars:
+\begin{itemize}
+    \item Translating - move the model by a specified distance relative to the X, Y, Z axes
+    \item Rotate the model by a given angle around its X, Y, Z axes
+    \item Scale the model for a given value.
+\end{itemize}
+
+By using the Menu File:
+\begin{itemize}
+    \item Upload and view model from the file in the fileName.obj
+    \item Close file
+    \item Save the model as image in .bmp and .jpeg format
+    \item Save GIF animation (640x480, 10fps, 5s)
+\end{itemize}
+
+By using the Menu Settings (pop-up dialog window appear):
+\begin{itemize}
+    \item Change widget background color
+    \item Change facets parameters - colour, thickness and type of line (solid or dashed)
+    \item Change vertices parameters - colour, size and type of points (none, circle or square)
+    \item Change projection - parralle or central
+    \item Restore default settings and start from the beginning!
+\end{itemize}
+
+The Program will save the settings if you close the model.
+
+\end{document}
