@@ -20,4 +20,4 @@ In order to build the program, use **make** in the
 located in the folder build/bin**.
 
 ## Documentation  
-You can learn more about the program and its features by examining the **3DViewer.pdf** file.
+You can learn more about the program and its features by examining the **[3DViewer.pdf](https://github.com/tfelwood/3DViewer/blob/master/3DViewer.pdf)** file.
