@@ -14,7 +14,7 @@ _C:\(path to Qt installed)\Qt\Tools\mingw1120 64(mingw tools version)\bin_
 Maybe it will be necessary to set equivalent paths in MacOS or Linux
 if build goes wrong. 
 
-## Building  
+## Build  
 In order to build the program, use **make** in the
 **root directory** of the project. Then you may execute program, **3DViewer is
 located in the folder build/bin**.
